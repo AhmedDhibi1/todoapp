@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+body {
+    background: linear-gradient(120deg,rgb(228, 0, 178),rgb(0, 189, 247));
+    height: 100vh;
+}
+.todo-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200px ;
+    width: 100%;
+    margin-left: -25px;
+    flex-direction: column;
+}
+.todo-input input {
+    display: flex;
+    border: none;
+    width:300px ;
+    height: 25px;
+    padding: 5px 10px;
+    color: rgb(56, 56, 56);
+    align-items: center;
+}
+.todo-input button ,.todo-list button {
+    display: flex;
+    background:none;
+    border: none;
+    /*background-color: white;*/
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; transition: 0.3s ease;
+    
+}
+
+.todo-input .todo-check , .todo-list .todo-checked {
+    
+    color: white;
+    background-color: green;
+}
+.todo-input .todo-trash ,.todo-list .todo-deleted{
+    color: white;
+    background-color: rgb(104, 2, 2);
+}
+.todo-input .todo-check:hover , .todo-list .todo-checked:hover {
+    color: green;
+    background-color: white;
+}
+.todo-input .todo-trash:hover ,.todo-list .todo-deleted:hover {
+    color: rgb(104, 2, 2);
+    background-color: white;
+}
+.todo-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.todo-list ul {
+    position: relative;
+    list-style: none;
+}
+.todo-list ul li {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    margin-bottom: 10px;
+
+
+}
+.todo-list ul li .todo-content {
+    display: flex;
+    width:300px ;
+    height: 25px;
+    padding: 5px 10px;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    color:rgb(0, 189, 247) ;
+}
+.todo-list ul .deleted {
+    
+    transform: rotateZ(25deg) translateY(200px);
+    opacity: 0.2;
+    text-decoration-line: line-through;
+    transition: 0.3s ease;
+}
+.todo-list ul .checked {
+    opacity: 0.4;
+    text-decoration-line: line-through;
+}
+.works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100px;
+    width:300px ;
+}
+.todo-input button {
+    transform: translateX(162.5px) translateY(-25px);
+}
+.todo-input .todo-trash {
+    transform: translateX(187.5px) translateY(-50px)
+}
+.todo-input input.input_text:focus {
+    border: 2px solid red;
+}
